@@ -224,12 +224,23 @@ header .bi-chevron-down {
   color: #fff;
 }
 
-.aboutus .container {
-  font-size: 16px;
+.aboutus svg {
+  margin-top: 30px;
 }
 
-.aboutus .col {
-  margin: 0 auto;
+.aboutus .aboutus-card-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.aboutus .aboutus-card-text {
+  font-size: 14px;
+}
+
+.aboutus .aboutus-hover:hover {
+  color: #eaa6f3;
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 
 .aboutus-hero {
@@ -262,26 +273,21 @@ header .bi-chevron-down {
   font-size: 24px;
 }
 
-.projects .card {
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.projects .card img {
+.projects .carousel-item {
+  position: relative;
   height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-.projects .card:hover {
-  -webkit-transform: scale(0.96);
-          transform: scale(0.96);
+.projects .carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.projects .card-title {
-  margin-bottom: 20px;
-  text-align: center;
-  text-transform: uppercase;
+.projects .carousel-indicators {
+  padding-bottom: 20px;
 }
 
 .courses {
@@ -381,13 +387,20 @@ header .bi-chevron-down {
 
 .contact {
   position: relative;
-  background-image: url("../img/makeup2_1920.jpg");
+  background-image: url("../img/makeup_1920.jpg");
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
   z-index: 0;
 }
 
 .contact h2 {
   color: #ddd;
   font-weight: bold;
+}
+
+.contact .underline {
+  background-color: #ddd;
 }
 
 .contact .contact-shadow {
@@ -432,10 +445,6 @@ header .bi-chevron-down {
   color: #ddd;
 }
 
-footer {
-  background-color: #f0d9f3;
-}
-
 @media (min-width: 375px) {
   header {
     text-align: center;
@@ -454,12 +463,6 @@ footer {
   }
   header p {
     font-size: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .aboutus img {
-    width: 100vw;
   }
 }
 
